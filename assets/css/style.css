@@ -1,0 +1,1286 @@
+/* Указываем box sizing */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+ 
+/* Убираем внутренние отступы */
+ul[class],
+ol[class] {
+  padding: 0;
+}
+ 
+/* Убираем внешние отступы */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+ul[class],
+ol[class],
+li,
+figure,
+figcaption,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+ 
+/* Выставляем основные настройки по-умолчанию для body */
+body {
+  min-height: 100vh;
+  scroll-behavior: smooth;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+ 
+/* Удаляем стандартную стилизацию для всех ul и il, у которых есть атрибут class*/
+ul[class],
+ol[class] {
+  list-style: none;
+}
+ 
+/* Элементы a, у которых нет класса, сбрасываем до дефолтных стилей */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+ 
+/* Упрощаем работу с изображениями */
+img {
+  max-width: 100%;
+  display: block;
+}
+  
+/* Наследуем шрифты для инпутов и кнопок */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+ 
+/* Удаляем все анимации и переходы для людей, которые предпочитай их не использовать */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+body {
+    font-family: 'Roboto';
+    overflow-x: hidden;
+}
+
+button {
+    cursor: pointer;
+}
+a {
+    text-decoration:none;
+    transition: 0.5s;
+}
+
+.transition {
+    transition: 1s;
+}
+
+/* Навигация по сайту */
+header {
+    display: flex;
+    align-items: flex-end;
+}
+
+nav {
+    width: 100%;
+    margin-left: 30px;
+    display: flex;
+    justify-content: space-around;
+}
+
+nav > a {
+    font-size: 20px;
+    color: black;
+}
+
+nav > a:hover {
+    color: red;
+    text-decoration: underline;
+}
+
+/* Главный экран */
+
+.section-main__body > h1 {
+    margin-top: 150px;
+    font-size: 52px;
+}
+
+.section-main__body > p {
+    margin-top: 50px;
+    font-size: 24px;
+    font-weight: 200;
+}
+
+.button-kosultation {
+    margin-top: 50px;
+    width: 320px;
+    height: 60px;
+    font-size: 24px;
+    border-radius: 10px;
+    color: #ffffff;
+    background-color: #f81010;
+}
+
+.button-kosultation:hover {
+    background-color: #798aa6;
+    color: #ffffff;
+}
+
+.section-main {
+    display: flex;
+
+}
+
+.section-main__content {
+    flex: 0 0 100%;
+    z-index: 10;
+}
+
+.section-main__img img{
+    max-width: 100%;
+}
+
+.section-main__img {
+    margin-top: 100px;
+    flex: 0 0 50%;
+    transform: translate(-90%, 0);
+}
+
+.section-main__body {
+    width: 60%;
+    margin-bottom: 50px;
+}
+
+/* Табличка фактов */
+.section-fact {
+    margin-bottom: 150px;
+}
+.section-fact__content {
+    width: 1100px;
+    height: 160px;
+    background-color: #f2f3f4;
+    box-shadow: 0px 15px 27px -17px #000000;
+    display: flex;
+    align-items: center;
+    padding: 10px;
+}
+
+.section-fact__content > div {
+    width: 33%;
+    height: 110px;
+    text-align: center;
+}
+
+.line-fact {
+    border-right: 1px solid;
+    border-left: 1px solid;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+.section-fact__content > div > h3 {
+    font-size: 36px;
+    color: red;
+}
+
+.section-fact__content > div > p {
+    font-size: 18px;
+    font-weight: 400;
+}
+
+/* Секция кто такой советник */
+
+.section-whoSovetnik {
+    position: relative;
+    background-color: #798aa6;
+    padding-bottom: 200px;
+}
+.section-whoSovetnik__wrap {
+    display: flex;
+    align-items: flex-start;
+}
+.section-whoSovetnik__image {
+    max-width: 50%;
+}
+.section-whoSovetnik__image > img {
+    margin-top: -20px;
+}
+
+.section-whoSovetnik__content {
+    max-width: 30%;
+    margin-left: 20px;
+    color: #ffffff;
+}
+
+.section-whoSovetnik__content > h2{
+    margin-top: 10vh;
+    font-size: 48px;
+    margin-bottom: 20px;
+}
+
+.section-whoSovetnik__content > p {
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+.bg-house__img {
+    position: absolute;
+    top: 5vh;
+    right: 0;
+}
+
+
+
+.section-myProject__content {
+    position: absolute;
+    bottom: -80px;
+    left: 15%;
+    width: 1100px;
+    display: flex;
+    background-color: #f2f3f4;
+    box-shadow: 0px 15px 27px -17px #000000;
+    align-items: flex-start;
+    padding: 10px;
+}
+
+.section-myProject__content > div > h3 {
+    font-size: 36px;
+    color: #798aa6;
+}
+
+.section-myProject__content > div > p {
+    font-size: 18px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.section-myProject__content > div {
+    text-align: center;
+}
+
+.section-myProject__content > div > a {
+    position: relative;
+    font-size: 16px;
+    color: #798aa6;
+}
+
+.section-myProject__content > div > a::after {
+    content: url(../img/whoSovetnik/right.png);
+    position: absolute;
+    top: 0px;
+    right: -30px;
+    
+}
+
+.myProject-line {
+    border-right: 1px solid;
+    border-left: 1px solid;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+/* Ваши советники */
+
+.section-yourSovetnik {
+    position: relative;
+    margin-top: 180px;
+    padding-bottom: 100px;
+}
+
+.section-yourSovetnik__general {
+    display: flex;
+    margin-left: 30px;
+}
+
+.section-yourSovetnik__title {
+    text-align: center;
+    margin-bottom: 70px;
+}
+
+.section-yourSovetnik__title > h2 {
+    font-size: 48px;
+}
+
+.section-yourSovetnik__title > p {
+    font-size: 18px;
+}
+
+.section-yourSovetnik__general__img {
+    width: 30%;
+    max-width: 264px;
+    max-height: 350px;
+}
+
+.section-yourSovetnik__general__text {
+    margin-left: 95px;
+    width: 70%;
+}
+
+.section-yourSovetnik__general__text > h3 {
+    margin-top: 30px;
+    font-size: 30px;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+.section-yourSovetnik__general__text > p {
+    color: #9b9b9b;
+    font-size: 16px;
+}
+
+.lozung {
+    width: 70%;
+    font-family: 'Century Gothic';
+    color: #9b9b9b;
+    font-size: 24px;
+}
+.lozung-box {
+    position: relative;
+    margin-top: 30px;
+}
+.lozung__img {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+/* Ваши советники - сотрудники */
+
+.section-yourSovetnik__sotrudniki {
+    margin-top: 80px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.section-yourSovetnik__sotrudniki-page {
+    width: 25%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.section-yourSovetnik__sotrudniki-page__image img{
+    max-width: 264px;
+    max-height: 345px;
+}
+
+.section-yourSovetnik__sotrudniki-page > h3 {
+    width: 83%;
+    text-align: center;
+}
+
+.section-yourSovetnik__sotrudniki-page > p {
+    color: #9b9b9b;
+    margin-top: 15px;
+    margin-bottom: 10px;
+}
+
+.section-yourSovetnik__sotrudniki-page > a {
+    position: relative;
+    color: red;
+    font-size: 16px;
+    font-weight: 700;
+}
+
+.section-yourSovetnik__sotrudniki-page > a::after {
+    content: url(../img/yourSovetnik/sotrudniki/right.png);
+    position: absolute;
+    top: 3px;
+    right: -30px;
+}
+
+.img-bg-list1 {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 13%;
+}
+
+.img-bg-list2 {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 10%;
+}
+
+/* Секция блога */
+
+.section-preBlog {
+    position: relative;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    background-color: #798aa6;
+}
+
+.section-preBlog__bgImage {
+    position: absolute;
+    width: 10%;
+    bottom: 20px;
+    left: 0px;
+}
+.section-preBlog__title > h2 {
+    font-size: 48px;
+    color: #ffffff;
+}
+
+.section-preBlog__category {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.section-preBlog__blog__publish {
+    width: 420px;
+}
+.section-preBlog__category > a{
+    color: #ffffff;
+    font-size: 18px;
+}
+
+.section-preBlog__category > a:hover {
+    color: #fffc0d;
+}
+
+.section-preBlog__blog {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    color: #ffffff;
+    margin-top: 30px;
+}
+.publish__image {
+    width: 420px;
+}
+
+.publish__link > a {
+    position: relative;
+    color: #fffc0d;
+}
+
+.publish__link > a::after {
+    content: url(../img/preBlog/right.png);
+    position: absolute;
+    top: 0;
+    right: -30px;
+}
+
+.publish__content > h3 {
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+.publish__content > p {
+    margin-bottom: 10px;
+}
+
+/* ФОрма */
+.section-form {
+    margin-top: 100px;
+}
+.section-form__center {
+    display: flex;
+    justify-content: center;
+}
+.secion-form__wrap {
+    position: relative;
+    background-color: #ededec;
+    width: 1200px;
+    height: 696px;
+    display: flex;
+    box-shadow: 0px 15px 27px -17px #000000;
+}
+
+.section-form__content {
+    width: 700px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 50px;
+}
+.form-box {
+    margin-top: 50px;
+}
+
+.textb {
+    width: 220px;
+    background-color: transparent;
+    border: transparent;
+    border-bottom: 1px solid;
+    font-size: 20px;
+}
+
+.btn-form {
+    width: 488px;
+    height: 54px;
+    background-image: linear-gradient(-119deg, #c05359 0%, #e2736a 100%);
+    color: #ffffff;
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.btn-form:hover {
+    background-image: linear-gradient(-119deg, #e2736a 100%, #c05359 0%);
+}
+
+.input-box {
+    margin-top: 50px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.btn-box {
+    margin-top: 50px;
+}
+
+.form__content__text-box {
+    width: 74%;
+}
+
+.form__content__text-box > h3 {
+    font-size: 32px;
+}
+
+.paragraf {
+    margin-top: 30px;
+    margin-left: 10%;
+}
+
+.form__wrap__bgImage > img{
+    position: absolute;
+}
+
+.form__bgImage1 {
+    bottom: 0;
+    left: -125px;
+    z-index: -1;
+}
+
+.form__bgImage2 {
+    top: 0;
+    right: -125px;
+    z-index: -1;
+}
+
+/* Отзывы */
+.section-otzivi {
+    margin-top: 100px;
+}
+
+.section-otzivi__content {
+    display: flex;
+}
+
+.otzivi__image {
+    width: 20%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.otzivi__image > p{
+    margin-top: 15px;
+    font-size: 18px;
+    font-weight: 700;
+}
+
+.otzivi__text {
+    position: relative;
+    width: 80%;
+}
+
+.otzivi__text  > p{
+    font-size: 18px;
+    font-weight: 400;
+}
+
+.otzivi__text > img {
+    position: absolute;
+    top: -10px;
+    left: -10px;
+}
+
+.section-otzivi__title {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 50px;
+    margin-top: 50px;
+}
+.section-otzivi__title > h2 {
+    font-size: 48px;
+
+}
+
+.button-otzivi {
+    background-color: transparent;
+    border: transparent;
+    padding: 20px;
+}
+
+.button-wrap {
+    display: flex;
+    align-items: center;
+    margin-top: 30px;
+    flex-direction: column;
+}
+
+/* Адресс */
+.section-adress {
+    margin-top: 100px;
+}
+
+.section-adress__title {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 50px;
+}
+
+.section-adress__title > h2 {
+    font-size: 48px;
+}
+
+.section-adress__content-box {
+    position: absolute;
+    z-index: 5;
+    left: 1%;
+    margin-top: 10%;
+    width: 366px;
+    height: 330px;
+    border: 0 solid #000000;
+    background-color: #ffffff;
+    padding: 20px;
+}
+
+.adress-p {
+    color: #847f7f;
+    font-size: 18px;
+    font-weight: 700;
+}
+
+.adress-street {
+    font-size: 22px;
+    font-weight: 400;
+}
+
+.adress-number {
+    font-size: 24px;
+    font-weight: 500;
+}
+
+.adress-mail {
+    font-size: 22px;
+    font-weight: 400;
+    color: red;
+}
+
+.box-adress {
+    margin-bottom: 20px;
+}
+
+/* Футер */
+
+footer {
+    background-color: rgb(0, 0, 0);
+    color: #ffffff;
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+
+.footer-box {
+    display: flex;
+}
+
+.link-box {
+    display: flex;
+    flex-direction: column;
+}
+
+.link-box > a {
+    color: #ffffff;
+    font-weight: 300;
+}
+
+.seti-box {
+    display: flex;
+    flex-direction: column;
+}
+
+.footer-sochial__link {
+    border-bottom: 1px solid #ffffff;
+    display: flex;
+    justify-content: space-between;
+    width: 150px;
+    padding-bottom: 15px;
+    margin-bottom: 15px;
+}
+
+.footer-image-box, .footer-link, .footer-sochial, .footer__button {
+    width: 25%;
+}
+
+.seti-box__text-street {
+    font-size: 16px;
+    font-weight: 300;
+}
+
+.footer__button {
+    display: flex;
+    flex-direction: column;
+}
+
+.footer__button > button {
+    width: 244px;
+    height: 44px;
+    border: 2px solid #ffffff;
+    background-color: transparent;
+    color: #ffffff;
+    margin-bottom: 20px;
+}
+
+.footer__button > a {
+    color: #ffffff;
+    font-weight: 300;
+}
+
+.footer-image-box > p{
+    margin-top: 10px;
+    font-size: 20px;
+    font-weight: 300;
+}
+
+.footer-image-box > img {
+    margin-bottom: 20px;
+}
+#menu {
+    display: none;
+}
+
+
+
+
+
+
+
+
+@media only screen  and (max-width: 1800px) {
+    .bg-house__img {
+        display: none;
+    }
+    .section-whoSovetnik__content {
+        max-width: 40%;
+    }
+    .img-bg-list2 {
+        width: 5%;
+    }
+    .section-preBlog__bgImage {
+        display: none;
+    }
+}
+
+    
+@media (min-width: 1200px) and (max-width: 1400px) {
+    .section-fact__content {
+        width: 1000px;
+        height: 140px;
+        padding: 15px;
+    }
+    .section-myProject__content {
+        width: 1000px;
+    }
+    .section-myProject__content > div > h3 {
+        font-size: 32px;
+    }
+    .section-myProject__content > div > p {
+        font-size: 16px;
+    }
+    .section-fact__content > div > p {
+        font-size: 16px;
+    }
+    .section-fact__content > div > h3 {
+        font-size: 32px;
+    }
+    .section-preBlog__blog__publish {
+        margin-top: 20px;
+    }
+    .seti-box__text-street {
+        width: 85%;
+    }
+}
+
+@media (min-width: 1000px) and (max-width: 1200px) {
+    .section-fact__content {
+        width: 960px;
+        height: 140px;
+        padding: 15px;
+    }
+    .section-myProject__content {
+        width: 960px;
+        left: 0%;
+    }
+    .section-whoSovetnik__wrap {
+        align-items: center;
+    }
+    .lozung {
+        width: 100%;
+    }
+    .section-yourSovetnik__sotrudniki-page {
+        width: 50%;
+        margin-top: 20px;
+    }
+    .section-myProject__content > div > h3 {
+        font-size: 32px;
+    }
+    .section-myProject__content > div > p {
+        font-size: 16px;
+    }
+    .section-fact__content > div > p {
+        font-size: 16px;
+    }
+    .section-fact__content > div > h3 {
+        font-size: 32px;
+    }
+    .section-preBlog__blog__publish {
+        margin-top: 20px;
+    }
+    .seti-box__text-street {
+        width: 85%;
+    }
+}
+
+@media (min-width: 300px) and (max-width: 1000px) {
+    .container-mobile {
+        max-width: 720px;
+        width: 100%;
+        padding-right: var(--bs-gutter-x,.75rem);
+        padding-left: var(--bs-gutter-x,.75rem);
+        margin-right: auto;
+        margin-left: auto;
+    }
+    .otzivi__image  {
+        width: 100%;
+        margin-bottom: 25px;
+    }
+    .section-preBlog__title > h2 {
+        font-size: 38px;
+    }
+    .section-fact__content {
+        width: 960px;
+        height: 140px;
+        padding: 15px;
+        flex-direction: column;
+    }
+    .section-fact__content > div {
+        width: 100%;
+    }
+    .section-fact__content {
+        width: 300px;
+        height: 100%;
+    }
+    .line-fact {
+        border-top: 1px solid;
+        border-bottom: 1px solid;
+        border-left: none;
+        border-right: none;
+        padding-top: 15px;
+        padding-bottom: 15px;
+        margin-top: 15px;
+        margin-bottom: 15px;
+        margin-left: 0;
+        margin-right: 0;
+    }
+    .section-myProject__content {
+        width: 300px;
+        left: 10%;
+        flex-direction: column;
+        position: static;
+        padding-top: 20px;
+        padding-bottom: 20px;
+    }
+    .section-whoSovetnik__wrap {
+        display: flex;
+        flex-direction: column;
+        padding: 10px;
+    }
+    .section-myProject {
+        display: flex;
+        justify-content: center;
+    }
+    .section-fact {
+        margin-bottom: 50px;
+        display: flex;
+    }
+    .section-whoSovetnik {
+        padding-bottom: 50px;
+    }
+    .section-yourSovetnik {
+        margin-top: 100px;
+    }
+    .lozung {
+        width: 100%;
+    }
+    .img-bg-list1 {
+        display: none;
+    }
+    .img-bg-list2 {
+        display: none;
+    }
+    .section-yourSovetnik__sotrudniki-page {
+        width: 100%;
+        margin-top: 20px;
+    }
+    .section-myProject__content > div > h3 {
+        font-size: 32px;
+    }
+    .section-myProject__content > div > p {
+        font-size: 16px;
+    }
+    .section-fact__content > div > p {
+        font-size: 16px;
+    }
+    .section-fact__content > div > h3 {
+        font-size: 32px;
+    }
+    .section-preBlog__blog__publish {
+        margin-top: 20px;
+    }
+    .seti-box__text-street {
+        width: 85%;
+    }
+    #menu {
+        display: block;
+    }
+    nav {
+        display: none;
+    }
+    .myProject-line {
+        border-top: 1px solid;
+        border-bottom: 1px solid;
+        margin-top: 30px;
+        padding-top: 30px;
+        margin-bottom: 30px;
+        padding-bottom: 30px;
+        border-right: none;
+        border-left: none;
+        margin-left: 0;
+        margin-right: 0;
+    }
+    .section-whoSovetnik__image {
+        max-width: 100%;
+    }
+    .section-whoSovetnik__content {
+        max-width: 100%;
+    }
+
+    .section-preBlog__blog {
+        justify-content: center;
+    }
+
+    .section-preBlog__category > a {
+        font-size: 14px;
+    }
+    .secion-form__image {
+        display: none;
+    }
+    .form__wrap__bgImage {
+        display: none;
+    }
+    .section-form__content {
+        width: 100%;
+    }
+
+    .section-otzivi__content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .footer-box {
+        flex-direction: column;
+    }
+    .footer-image-box, .footer-link, .footer-sochial, .footer__button {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+    /* Меню мобильный */
+    /* body {
+        transition: all ease 1s;
+    }
+
+    .c-hamburger {
+        display: block;
+        position: absolute;
+        right: 0;
+        top: 0;
+        overflow: hidden;
+        margin: 0;
+        padding: 0;
+        width: 96px;
+        height: 96px;
+        font-size: 0;
+        box-shadow: 0;
+        cursor: pointer;
+        border: none;
+        background: red;
+    }
+
+    .c-hamburger:focus {
+        outline: none;
+    }
+
+    .c-hamburger > span {
+        display: block;
+        position: absolute;
+        top:44px;
+        left: 18px;
+        right: 18px;
+        height: 8px;
+        background: #ffffff;
+    }
+
+    .c-hamburger > span::before, .c-hamburger > span::after {
+        position: absolute;
+        display: block;
+        left: 0;
+        width: 100%;
+        height: 8px;
+        background: #ffffff;
+        content: '';
+    }
+
+    .c-hamburger > span::before {
+        top: -20px
+    }
+
+    .c-hamburger > span::after {
+        bottom: -20px;
+    }
+
+    .c-hamburger-line > span {
+        transition: background 0s 0.3s;
+    }
+
+    .c-hamburger-line > span::before, .c-hamburger-line > span::after {
+        transition-duration: 0.3s, 0.3s;
+        transition-delay: 0.3s, 0s;
+    }
+
+    .c-hamburger-line > span::before {
+        transition-property: top, transform;
+    }
+
+    .c-hamburger-line > span::after {
+        transition-property: bottom, transform;
+    }
+
+    .c-hamburger-line.is-active {
+        background: rgb(161, 34, 34);
+    }
+
+    .c-hamburger-line.is-active span {
+        background: none;
+    }
+
+    .c-hamburger-line.is-active span::before {
+        top: 0;
+        transform: rotate(-45deg);
+    }
+
+    .c-hamburger-line.is-active span::after {
+        bottom: 0;
+        transform: rotate(45deg);
+    }
+
+    .c-hamburger-line.is-active span::before, .c-hamburger-line.is-active span::after {
+        transition-delay: 0s, 0.3s;
+    }
+    
+    #menu {
+        width: 300px;
+        margin-left: -204px;
+        position: fixed;
+        left: 0;
+        top: 0;
+        bottom: 0;
+        transition: all ease 1s;
+        z-index: 999;
+    }
+
+    .body-active {
+        margin-left: 300px;
+    }
+
+    #menu.nav-active {
+        margin-left: 0;
+    }
+
+    .menu-link {
+        padding: 20px;
+        margin-top: 30px;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .menu-link > a {
+        color: rgb(0, 0, 0);
+        font-size: 20px;
+    } */
+    /* Закончили меню мобильный */
+}
+
+@media (min-width: 300px) and (max-width: 768px) {
+    .container-mobile {
+        max-width: 540px;
+        width: 100%;
+        padding-right: var(--bs-gutter-x,.75rem);
+        padding-left: var(--bs-gutter-x,.75rem);
+        margin-right: auto;
+        margin-left: auto;
+    }
+    .section-yourSovetnik__general {
+        display: flex;
+        margin-left: 0px;
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .section-yourSovetnik__general__img {
+        width: 100%;
+    }
+    .section-yourSovetnik__general__text {
+        margin-left: 0px;
+        width: 100%;
+    }
+
+    .section-yourSovetnik__general__text > h3, .section-yourSovetnik__general__text > p {
+        text-align: center;
+    }
+
+    .section-adress__content-box {
+        display: none;
+    }
+
+    .section-adress__title > h2 {
+        font-size: 38px;
+    }
+
+    .section-otzivi__title > h2 {
+        font-size: 38px;
+    }
+
+    .form__content__text-box {
+        width: 100%;
+    }
+    .btn-form {
+        width: 100%;
+    }
+
+    .textb {
+        width: 200px;
+        margin-right: 10px;
+        font-size: 16px;
+    }
+    .section-main__img {
+        display: none;
+    }
+    .section-main__body {
+        width: 100%;
+    }
+    .section-main__body > h1 {
+        margin-top: 100px;
+        font-size: 40px;
+    }
+
+    header {
+        display: flex;
+        justify-content: center;
+    }
+
+    .section-main__body {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .section-fact {
+        justify-content: center;
+    }
+
+
+}
+
+@media (min-width: 300px) and (max-width: 500px) {
+    .publish__image {
+        width: 280px;
+    }
+    .publish__content > h3 {
+        font-size: 18px;
+    }
+    .publish__content > p {
+        font-size: 16px;
+    }
+    .input-box {
+        margin-top: 0px;
+        display: flex;
+        flex-direction: column;
+    }
+    .textb {
+        margin-bottom: 15px;
+    }
+    .form__content__text-box > h3 {
+        font-size: 20px;
+    }
+    .section-form__content {
+        padding: 15px;
+    }
+    .secion-form__wrap {
+        position: relative;
+        background-color: #ededec;
+        width: 100%;
+        height: 100%;
+    }
+    .section-preBlog__title > h2 {
+        font-size: 38px;
+    }
+    
+    .section-preBlog {
+        padding-top: 20px;
+    }
+
+    .otzivi__image {
+        margin-bottom: 20px;
+    }
+
+    .section-yourSovetnik__title > h2 {
+        font-size: 38px;
+        margin-bottom: 15px;
+    }
+
+    .section-whoSovetnik__content > h2 {
+        margin-top: 10vh;
+        font-size: 34px;
+    }
+    .button-kosultation {
+        margin-top: 50px;
+        width: 220px;
+        height: 60px;
+        font-size: 16px;
+    }
+    .section-preBlog__category {
+        flex-direction: column;
+    }
+}
